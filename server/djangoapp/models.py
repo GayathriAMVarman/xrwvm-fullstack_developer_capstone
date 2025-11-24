@@ -49,5 +49,3 @@ class CarModel(models.Model):
     def __str__(self):
         return self.name  # Return the name as the string representation
 
-admin.site.register(CarMake)
-admin.site.register(CarModel)
