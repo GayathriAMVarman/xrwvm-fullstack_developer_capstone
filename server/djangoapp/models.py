@@ -11,7 +11,8 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 # - Name
 # - Description
 # - Any other fields you would like to include in car make model
-# - __str__ method to print a car make object
+# - __str__ method to 
+#print a car make object
 
 
 class CarMake(models.Model):
