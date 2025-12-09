@@ -138,8 +138,7 @@ def add_review(request):
 # Create a `get_cars` view to render the carmodels of same car make
 # ...
 def get_cars(request):
-    count = CarMake.objects
-            .filter().count()
+    count = CarMake.objects.filter().count()
     print(count)
     if(count == 0) :
         initiate()
