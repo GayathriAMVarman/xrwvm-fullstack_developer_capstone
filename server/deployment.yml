@@ -26,7 +26,7 @@ spec:
         - name: icr
       containers:
         - name: dealership
-          image: us.icr.io/your-name-space/dealership:latest
+          image: us.icr.io/sn-labs-gayathriamv/dealership:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
