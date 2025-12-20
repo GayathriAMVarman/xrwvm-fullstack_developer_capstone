@@ -21,7 +21,8 @@ logger = logging.getLogger(__name__)
 
 
 # Create your views here.
-
+def index(request):
+    return render(request, "index.html")
 # Create a `login_request` view to handle sign in request
 @csrf_exempt
 def login_user(request):
