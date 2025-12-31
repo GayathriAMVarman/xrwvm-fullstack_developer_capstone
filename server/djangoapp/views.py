@@ -36,6 +36,13 @@ def login_user(request):
     if user is not None :
         # If user is valid, call login method to login current user
         login(request, user)
+        if (!username || !password) {
+        return res.status(404).json({ message: "Error logging in" });
+    }
+    // Authenticate user
+        
+        // Generate JWT access token
+        
         data = {"userName": username, "status": "Authenticated"}
     return JsonResponse(data)
 
