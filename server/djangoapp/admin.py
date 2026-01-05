@@ -5,7 +5,7 @@ from .models import CarMake, CarModel
 
 
 # Register your models here.
-admin.site.register(CarMake)
+admin.site.register(CarModel)
 # Register your models here.
 
 # CarModelInline class
@@ -14,9 +14,9 @@ class CarModelInline(admin.StackedInline):
     extra = 1  # Number of empty forms to show
 
 # CarModelAdmin class
-class CarModelAdmin(admin.ModelAdmin):
+class CarMakeAdmin(admin.ModelAdmin):
     inlines = [CarModelInline]  # Registering the inline
 
 # CarMakeAdmin class with CarModelInline 
-admin.site.register(CarModel, CarModelAdmin)
+admin.site.register(CarMake, CarMakeAdmin)
 # Register models here
