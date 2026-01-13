@@ -68,7 +68,8 @@ def registration(request):
         # Check if user already exists
         User.objects.get(username=username)
         username_exist = True
-    except:
+    except Exception as e:
+        print(f"Hey, there's a {e}.Look into it! :)"); 
         # If not, simply log this is a new user
         logger.debug("{} is new user".format(username))
 
@@ -141,7 +142,8 @@ def add_review(request):
             print(response)
             return JsonResponse({"status": 200,
                                  "message": "Review added successfully!!!"})
-        except:
+        except Exception as e:
+            print(f"Hey, there's a {e}. Look into it! :)");
             return JsonResponse({"status": 401,
                                  "message": "Error in posting review"})
     else:
