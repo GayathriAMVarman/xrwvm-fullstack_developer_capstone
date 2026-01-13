@@ -32,7 +32,7 @@ def initiate():
       },
       {
        "name": "XTRAIL",
-       "type": "SUV", 
+       "type": "SUV",
        "year": 2023,
        "car_make": car_make_instances[0]
       },
@@ -107,7 +107,7 @@ def initiate():
           "type": "SUV",
           "year": 2023,
           "car_make": car_make_instances[4]
-      },# Add more CarModel instances as needed
+      },   # Add more CarModel instances as needed
     ]
 
     for data1 in car_model_data:
