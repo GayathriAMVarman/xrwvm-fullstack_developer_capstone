@@ -17,9 +17,9 @@ class CarModelInline(admin.StackedInline):
 
 # CarModelAdmin class
 class CarMakeAdmin(admin.ModelAdmin):
-    inlines = [CarModelInline]# Registering the inline
+    inlines = [CarModelInline]  # Registering the inline
 
 
-# CarMakeAdmin class with CarModelInline 
+# CarMakeAdmin class with CarModelInline
 admin.site.register(CarMake, CarMakeAdmin)
 # Register models here
