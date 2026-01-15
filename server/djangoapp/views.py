@@ -69,7 +69,7 @@ def registration(request):
         User.objects.get(username=username)
         username_exist = True
     except Exception as e:
-        print(f"Hey, there's a {e}.Look into it! :)"); 
+        print(f"Hey, there's a {e}.Look into it! :) ")
         # If not, simply log this is a new user
         logger.debug("{} is new user".format(username))
 
@@ -138,16 +138,16 @@ def add_review(request):
     if (request.user.is_anonymous is False):
         data = json.loads(request.body)
         try:
-            response = post_review(data) 
+            response = post_review(data)
             print(response)
             return JsonResponse({"status": 200,
                                  "message": "Review added successfully!!!"})
         except Exception as e:
-            print(f"Hey, there's a {e}. Look into it! :)");
+            print(f"Hey, there's a {e}. Look into it! :) ")
             return JsonResponse({"status": 401,
                                  "message": "Error in posting review"})
     else:
-        return JsonResponse({"status": 403, 
+        return JsonResponse({"status": 403,
                              "message": "Unauthorized"})
 
 
